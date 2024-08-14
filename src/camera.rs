@@ -31,8 +31,6 @@ fn camera_movement(mut query: Query<&mut Transform, With<GameCamera>>,
 ) {
     for mut transform in query.iter_mut() {
 
-        transform.rotation
-
         // WASD and arrow key movement controls
         if keyboard_input.pressed(KeyCode::KeyA) || keyboard_input.pressed(KeyCode::ArrowLeft) {
             transform.translation[0] += 10. * time.delta_seconds();
