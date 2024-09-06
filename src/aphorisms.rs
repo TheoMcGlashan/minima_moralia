@@ -4,12 +4,12 @@ pub struct AphorismsPlugin;
 
 impl Plugin for AphorismsPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(Startup, setup);
+        app.add_systems(Startup, spawn_aphorism);
     }
 }
 
 /// set up a simple 3D scene
-fn setup(
+fn spawn_aphorism(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
